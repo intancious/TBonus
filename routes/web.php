@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/produk', 'ProdukController@index');
+Route::get('/produk/create', 'ProdukController@create');
+Route::post('/produk', 'ProdukController@store');
+Route::get('/produk/{produk_id}', 'ProdukController@show');
+Route::get('/produk/{produk_id}/edit', 'ProdukController@edit');
+Route::put('/produk/{produk_id}', 'ProdukController@update');
+Route::delete('/produk/{produk_id}', 'ProdukController@destroy');
