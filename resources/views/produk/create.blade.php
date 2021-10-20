@@ -9,7 +9,7 @@
         <div class="form-group">
             <label for="nama">Nama Produk</label>
             <input type="text" class="form-control" name="nama_produk" id="nama" placeholder="Masukkan nama">
-            @error('nama')
+            @error('nama_produk')
             <div class="alert alert-danger">
                 {{ $message }}
             </div>

@@ -21,7 +21,7 @@ class ProdukController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_produk' => 'required',
+            'nama_produk' => 'required|unique:produk',
             'keterangan' => 'required',
             'harga' => 'required',
             'jumlah' => 'required'
@@ -53,7 +53,7 @@ class ProdukController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama_produk' => 'required',
+            'nama_produk' => 'required|unique:produk',
             'keterangan' => 'required',
             'harga' => 'required',
             'jumlah' => 'required'
@@ -71,7 +71,7 @@ class ProdukController extends Controller
     public function destroy($id)
     {
         $produk = Produk::find($id);
-        $produk = delete();
+        $produk->delete();
         return redirect('/produk');
     }
 }

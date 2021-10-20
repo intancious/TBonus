@@ -29,7 +29,8 @@
                     <form action="/produk/{{$value->id}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" class="btn btn-danger my-1" value="Delete">
+                        <input type="submit" class="btn btn-danger my-1" name="delet" value="Delete">
+
                     </form>
                 </td>
             </tr>
